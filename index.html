@@ -1,0 +1,21 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pressure Sensitivity Checker</title>
+</head>
+<body>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.addEventListener('touchstart', function(event) {
+                if ('ontouchstart' in window && 'ontouchforcechange' in window) {
+                    alert('Device supports pressure sensitivity');
+                } else {
+                    alert('Device does not support pressure sensitivity');
+                }
+            });
+        });
+    </script>
+    <h1>Touch Screen</h1>
+</body>
+</html>
